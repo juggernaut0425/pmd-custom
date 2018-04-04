@@ -39,7 +39,7 @@ java，android
                      <dependency>
                          <groupId>org.tiggerlee</groupId>
                          <artifactId>pmd-custom</artifactId>
-                         <version>1.0-SNAPSHOT</version>
+                         <version>6.2.0</version>
                      </dependency>
                  </dependencies>
              </plugin>
