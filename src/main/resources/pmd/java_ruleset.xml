@@ -36,6 +36,7 @@
     <rule ref="category/java/errorprone.xml">
         <exclude name="DataflowAnomalyAnalysis"/>
         <exclude name="BeanMembersShouldSerialize"/>
+        <exclude name="AvoidCatchingThrowable"/>
     </rule>
     <rule ref="category/java/multithreading.xml">
         <exclude name="NonThreadSafeSingleton"/>
