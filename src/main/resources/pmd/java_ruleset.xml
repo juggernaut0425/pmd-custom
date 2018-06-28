@@ -4,7 +4,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
     <description>custom rule set</description>
-    <rule ref="category/java/bestpractices.xml"/>
+    <rule ref="category/java/bestpractices.xml">
+        <exclude name="AvoidStringBufferField"/>
+    </rule>
     <rule ref="category/java/codestyle.xml">
         <exclude name="ForLoopsMustUseBraces"/>
         <exclude name="IfElseStmtsMustUseBraces"/>
@@ -15,6 +17,7 @@
         <exclude name="AtLeastOneConstructor"/>
         <exclude name="OnlyOneReturn"/>
         <exclude name="LongVariable"/>
+        <exclude name="CommentDefaultAccessModifier"/>
     </rule>
     <rule ref="category/java/design.xml">
         <exclude name="ModifiedCyclomaticComplexity"/>
@@ -27,6 +30,7 @@
         <exclude name="DataClass"/>
         <exclude name="LawOfDemeter"/>
         <exclude name="UseObjectForClearerAPI"/>
+        <exclude name="FieldDeclarationsShouldBeAtStartOfClass"/>
     </rule>
     <!--<rule ref="category/java/documentation.xml"/>-->
     <rule ref="category/java/errorprone.xml">
@@ -36,9 +40,16 @@
     <rule ref="category/java/multithreading.xml">
         <exclude name="NonThreadSafeSingleton"/>
         <exclude name="AvoidUsingVolatile"/>
+        <exclude name="UseConcurrentHashMap"/>
     </rule>
     <rule ref="category/java/performance.xml">
         <exclude name="AddEmptyString"/>
         <exclude name="AvoidInstantiatingObjectsInLoops"/>
+    </rule>
+
+    <rule ref="category/java/codestyle.xml/ShortVariable" >
+        <properties>
+            <property name="minimum" value="2"/>
+        </properties>
     </rule>
 </ruleset>
